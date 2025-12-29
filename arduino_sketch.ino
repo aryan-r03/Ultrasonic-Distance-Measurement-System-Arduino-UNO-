@@ -11,7 +11,7 @@ void setup() {
 }
 
 void loop() {
-  // Trigger ultrasonic pulse ; adjust as per your needs 
+  // Trigger ultrasonic pulse
   digitalWrite(TRIG, LOW);
   delayMicroseconds(2);
   digitalWrite(TRIG, HIGH);
@@ -20,7 +20,7 @@ void loop() {
 
   // Measure echo
   long duration = pulseIn(ECHO, HIGH, 30000); // timeout safety
-  float distance = duration * 0.0343 / 2;    // cm
+  float distance = duration * 0.0343 / 2;    // centimeters 
 
   // Debug output
   Serial.println(distance);
